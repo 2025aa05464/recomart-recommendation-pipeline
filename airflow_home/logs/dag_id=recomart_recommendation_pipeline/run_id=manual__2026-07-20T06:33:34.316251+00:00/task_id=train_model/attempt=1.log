@@ -1,0 +1,60 @@
+[2026-07-20T06:34:10.239+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-07-20T06:34:10.272+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: recomart_recommendation_pipeline.train_model manual__2026-07-20T06:33:34.316251+00:00 [queued]>
+[2026-07-20T06:34:10.284+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: recomart_recommendation_pipeline.train_model manual__2026-07-20T06:33:34.316251+00:00 [queued]>
+[2026-07-20T06:34:10.285+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-07-20T06:34:10.315+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): train_model> on 2026-07-20 06:33:34.316251+00:00
+[2026-07-20T06:34:10.332+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'recomart_recommendation_pipeline', 'train_model', 'manual__2026-07-20T06:33:34.316251+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/recomart_pipeline_dag.py', '--cfg-path', '/tmp/tmplqjsza2y']
+[2026-07-20T06:34:10.335+0000] {logging_mixin.py:188} WARNING - /workspaces/recomart-recommendation-pipeline/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=75820) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-20T06:34:10.336+0000] {standard_task_runner.py:91} INFO - Job 10: Subtask train_model
+[2026-07-20T06:34:10.336+0000] {standard_task_runner.py:64} INFO - Started process 75900 to run task
+[2026-07-20T06:34:10.366+0000] {task_command.py:426} INFO - Running <TaskInstance: recomart_recommendation_pipeline.train_model manual__2026-07-20T06:33:34.316251+00:00 [running]> on host codespaces-4827dc
+[2026-07-20T06:34:10.418+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart_data_team' AIRFLOW_CTX_DAG_ID='recomart_recommendation_pipeline' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2026-07-20T06:33:34.316251+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-20T06:33:34.316251+00:00'
+[2026-07-20T06:34:10.419+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-07-20T06:34:10.420+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-20T06:34:10.420+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /workspaces/recomart-recommendation-pipeline && source venv/bin/activate && python scripts/train_model.py']
+[2026-07-20T06:34:10.431+0000] {subprocess.py:86} INFO - Output:
+[2026-07-20T06:34:11.216+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-07-20T06:34:11.217+0000] {subprocess.py:93} INFO -   File "/workspaces/recomart-recommendation-pipeline/scripts/train_model.py", line 6, in <module>
+[2026-07-20T06:34:11.218+0000] {subprocess.py:93} INFO -     import mlflow
+[2026-07-20T06:34:11.218+0000] {subprocess.py:93} INFO -   File "/workspaces/recomart-recommendation-pipeline/venv/lib/python3.12/site-packages/mlflow/__init__.py", line 44, in <module>
+[2026-07-20T06:34:11.218+0000] {subprocess.py:93} INFO -     from mlflow import (
+[2026-07-20T06:34:11.218+0000] {subprocess.py:93} INFO -   File "/workspaces/recomart-recommendation-pipeline/venv/lib/python3.12/site-packages/mlflow/artifacts/__init__.py", line 11, in <module>
+[2026-07-20T06:34:11.219+0000] {subprocess.py:93} INFO -     from mlflow.entities.file_info import FileInfo
+[2026-07-20T06:34:11.219+0000] {subprocess.py:93} INFO -   File "/workspaces/recomart-recommendation-pipeline/venv/lib/python3.12/site-packages/mlflow/entities/__init__.py", line 6, in <module>
+[2026-07-20T06:34:11.221+0000] {subprocess.py:93} INFO -     from mlflow.entities.assessment import (
+[2026-07-20T06:34:11.221+0000] {subprocess.py:93} INFO -   File "/workspaces/recomart-recommendation-pipeline/venv/lib/python3.12/site-packages/mlflow/entities/assessment.py", line 20, in <module>
+[2026-07-20T06:34:11.222+0000] {subprocess.py:93} INFO -     from mlflow.utils.proto_json_utils import proto_timestamp_to_milliseconds
+[2026-07-20T06:34:11.222+0000] {subprocess.py:93} INFO -   File "/workspaces/recomart-recommendation-pipeline/venv/lib/python3.12/site-packages/mlflow/utils/proto_json_utils.py", line 12, in <module>
+[2026-07-20T06:34:11.225+0000] {subprocess.py:93} INFO -     import pydantic
+[2026-07-20T06:34:11.225+0000] {subprocess.py:93} INFO -   File "/workspaces/recomart-recommendation-pipeline/venv/lib/python3.12/site-packages/pydantic/__init__.py", line 5, in <module>
+[2026-07-20T06:34:11.228+0000] {subprocess.py:93} INFO -     from ._migration import getattr_migration
+[2026-07-20T06:34:11.229+0000] {subprocess.py:93} INFO -   File "/workspaces/recomart-recommendation-pipeline/venv/lib/python3.12/site-packages/pydantic/_migration.py", line 4, in <module>
+[2026-07-20T06:34:11.229+0000] {subprocess.py:93} INFO -     from pydantic.warnings import PydanticDeprecatedSince20
+[2026-07-20T06:34:11.229+0000] {subprocess.py:93} INFO -   File "/workspaces/recomart-recommendation-pipeline/venv/lib/python3.12/site-packages/pydantic/warnings.py", line 5, in <module>
+[2026-07-20T06:34:11.229+0000] {subprocess.py:93} INFO -     from .version import version_short
+[2026-07-20T06:34:11.230+0000] {subprocess.py:93} INFO -   File "/workspaces/recomart-recommendation-pipeline/venv/lib/python3.12/site-packages/pydantic/version.py", line 7, in <module>
+[2026-07-20T06:34:11.230+0000] {subprocess.py:93} INFO -     from pydantic_core import __version__ as __pydantic_core_version__
+[2026-07-20T06:34:11.230+0000] {subprocess.py:93} INFO -   File "/workspaces/recomart-recommendation-pipeline/venv/lib/python3.12/site-packages/pydantic_core/__init__.py", line 6, in <module>
+[2026-07-20T06:34:11.231+0000] {subprocess.py:93} INFO -     from typing_extensions import Sentinel
+[2026-07-20T06:34:11.231+0000] {subprocess.py:93} INFO - ImportError: cannot import name 'Sentinel' from 'typing_extensions' (/workspaces/recomart-recommendation-pipeline/venv/lib/python3.12/site-packages/typing_extensions.py). Did you mean: '_Sentinel'?
+[2026-07-20T06:34:11.349+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-07-20T06:34:11.350+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-07-20T06:34:11.358+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/workspaces/recomart-recommendation-pipeline/airflow_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/recomart-recommendation-pipeline/airflow_venv/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/recomart-recommendation-pipeline/airflow_venv/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/recomart-recommendation-pipeline/airflow_venv/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-07-20T06:34:11.377+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=recomart_recommendation_pipeline, task_id=train_model, run_id=manual__2026-07-20T06:33:34.316251+00:00, execution_date=20260720T063334, start_date=20260720T063410, end_date=20260720T063411
+[2026-07-20T06:34:11.411+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 10 for task train_model (Bash command failed. The command returned a non-zero exit code 1.; 75900)
+[2026-07-20T06:34:11.438+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2026-07-20T06:34:11.457+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-20T06:34:11.459+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

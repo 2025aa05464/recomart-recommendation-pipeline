@@ -1,0 +1,25 @@
+[2026-07-20T06:33:38.602+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-07-20T06:33:38.623+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: recomart_recommendation_pipeline.ingest_data manual__2026-07-20T06:33:34.316251+00:00 [queued]>
+[2026-07-20T06:33:38.629+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: recomart_recommendation_pipeline.ingest_data manual__2026-07-20T06:33:34.316251+00:00 [queued]>
+[2026-07-20T06:33:38.630+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-07-20T06:33:38.652+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): ingest_data> on 2026-07-20 06:33:34.316251+00:00
+[2026-07-20T06:33:38.667+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'recomart_recommendation_pipeline', 'ingest_data', 'manual__2026-07-20T06:33:34.316251+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/recomart_pipeline_dag.py', '--cfg-path', '/tmp/tmpp7z1g04s']
+[2026-07-20T06:33:38.679+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask ingest_data
+[2026-07-20T06:33:38.682+0000] {logging_mixin.py:188} WARNING - /workspaces/recomart-recommendation-pipeline/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=75241) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-20T06:33:38.683+0000] {standard_task_runner.py:64} INFO - Started process 75288 to run task
+[2026-07-20T06:33:38.738+0000] {task_command.py:426} INFO - Running <TaskInstance: recomart_recommendation_pipeline.ingest_data manual__2026-07-20T06:33:34.316251+00:00 [running]> on host codespaces-4827dc
+[2026-07-20T06:33:38.804+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart_data_team' AIRFLOW_CTX_DAG_ID='recomart_recommendation_pipeline' AIRFLOW_CTX_TASK_ID='ingest_data' AIRFLOW_CTX_EXECUTION_DATE='2026-07-20T06:33:34.316251+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-20T06:33:34.316251+00:00'
+[2026-07-20T06:33:38.809+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-07-20T06:33:38.845+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-20T06:33:38.846+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /workspaces/recomart-recommendation-pipeline && source venv/bin/activate && python scripts/ingest_data.py']
+[2026-07-20T06:33:38.864+0000] {subprocess.py:86} INFO - Output:
+[2026-07-20T06:33:57.235+0000] {subprocess.py:93} INFO - Starting RecoMart data ingestion...
+[2026-07-20T06:33:57.235+0000] {subprocess.py:93} INFO - [OK] Ingested 100000 ratings -> data/raw/interactions/2026-07-20/ratings.csv
+[2026-07-20T06:33:57.236+0000] {subprocess.py:93} INFO - [OK] Ingested metadata for 41 movies -> data/raw/metadata/2026-07-20/movie_metadata.csv
+[2026-07-20T06:33:57.236+0000] {subprocess.py:93} INFO - Ingestion complete. Check logs/ folder for details.
+[2026-07-20T06:33:57.339+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-20T06:33:57.340+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-07-20T06:33:57.388+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=recomart_recommendation_pipeline, task_id=ingest_data, run_id=manual__2026-07-20T06:33:34.316251+00:00, execution_date=20260720T063334, start_date=20260720T063338, end_date=20260720T063357
+[2026-07-20T06:33:57.429+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-07-20T06:33:57.445+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-20T06:33:57.449+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

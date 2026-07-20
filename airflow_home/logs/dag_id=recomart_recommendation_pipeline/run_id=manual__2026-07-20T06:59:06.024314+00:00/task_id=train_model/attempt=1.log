@@ -1,0 +1,29 @@
+[2026-07-20T06:59:41.343+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-07-20T06:59:41.357+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: recomart_recommendation_pipeline.train_model manual__2026-07-20T06:59:06.024314+00:00 [queued]>
+[2026-07-20T06:59:41.363+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: recomart_recommendation_pipeline.train_model manual__2026-07-20T06:59:06.024314+00:00 [queued]>
+[2026-07-20T06:59:41.363+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-07-20T06:59:41.404+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): train_model> on 2026-07-20 06:59:06.024314+00:00
+[2026-07-20T06:59:41.421+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'recomart_recommendation_pipeline', 'train_model', 'manual__2026-07-20T06:59:06.024314+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/recomart_pipeline_dag.py', '--cfg-path', '/tmp/tmp6pp_sza4']
+[2026-07-20T06:59:41.428+0000] {standard_task_runner.py:91} INFO - Job 17: Subtask train_model
+[2026-07-20T06:59:41.442+0000] {logging_mixin.py:188} WARNING - /workspaces/recomart-recommendation-pipeline/airflow_venv/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:62 DeprecationWarning: This process (pid=91081) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-20T06:59:41.447+0000] {standard_task_runner.py:64} INFO - Started process 91093 to run task
+[2026-07-20T06:59:41.485+0000] {task_command.py:426} INFO - Running <TaskInstance: recomart_recommendation_pipeline.train_model manual__2026-07-20T06:59:06.024314+00:00 [running]> on host codespaces-4827dc
+[2026-07-20T06:59:41.538+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='recomart_data_team' AIRFLOW_CTX_DAG_ID='recomart_recommendation_pipeline' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2026-07-20T06:59:06.024314+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-20T06:59:06.024314+00:00'
+[2026-07-20T06:59:41.539+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-07-20T06:59:41.540+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-20T06:59:41.541+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /workspaces/recomart-recommendation-pipeline && source venv/bin/activate && python scripts/train_model.py']
+[2026-07-20T06:59:41.550+0000] {subprocess.py:86} INFO - Output:
+[2026-07-20T06:59:49.009+0000] {subprocess.py:93} INFO - Loading data...
+[2026-07-20T06:59:49.010+0000] {subprocess.py:93} INFO - Training SVD model...
+[2026-07-20T06:59:49.010+0000] {subprocess.py:93} INFO - Evaluating...
+[2026-07-20T06:59:49.010+0000] {subprocess.py:93} INFO - RMSE: 0.9348
+[2026-07-20T06:59:49.011+0000] {subprocess.py:93} INFO - MAE: 0.7377
+[2026-07-20T06:59:49.011+0000] {subprocess.py:93} INFO - Precision@10: 0.7135
+[2026-07-20T06:59:49.011+0000] {subprocess.py:93} INFO - Recall@10: 0.5454
+[2026-07-20T06:59:49.011+0000] {subprocess.py:93} INFO - Run logged to MLflow. Run 'mlflow ui' to view the dashboard.
+[2026-07-20T06:59:49.541+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-20T06:59:49.541+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-07-20T06:59:49.559+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=recomart_recommendation_pipeline, task_id=train_model, run_id=manual__2026-07-20T06:59:06.024314+00:00, execution_date=20260720T065906, start_date=20260720T065941, end_date=20260720T065949
+[2026-07-20T06:59:49.580+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-07-20T06:59:49.589+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-20T06:59:49.590+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
