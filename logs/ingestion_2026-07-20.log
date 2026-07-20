@@ -1,0 +1,54 @@
+2026-07-20 04:42:32,626 | INFO | === Ingestion run started ===
+2026-07-20 04:42:32,846 | INFO | SUCCESS | Ingested 100000 rating records -> data/raw/interactions/2026-07-20/ratings.csv
+2026-07-20 04:42:33,569 | INFO | SUCCESS | Fetched metadata for 'Toy Story'
+2026-07-20 04:42:33,856 | INFO | SUCCESS | Fetched metadata for 'GoldenEye'
+2026-07-20 04:42:34,151 | INFO | SUCCESS | Fetched metadata for 'Four Rooms'
+2026-07-20 04:42:34,424 | INFO | SUCCESS | Fetched metadata for 'Get Shorty'
+2026-07-20 04:42:34,696 | INFO | SUCCESS | Fetched metadata for 'Copycat'
+2026-07-20 04:42:34,981 | WARNING | NOT FOUND | 'Shanghai Triad (Yao a yao yao dao waipo qiao)' -> Movie not found!
+2026-07-20 04:42:35,263 | INFO | SUCCESS | Fetched metadata for 'Twelve Monkeys'
+2026-07-20 04:42:35,545 | INFO | SUCCESS | Fetched metadata for 'Babe'
+2026-07-20 04:42:35,830 | INFO | SUCCESS | Fetched metadata for 'Dead Man Walking'
+2026-07-20 04:42:36,116 | INFO | SUCCESS | Fetched metadata for 'Richard III'
+2026-07-20 04:42:36,404 | WARNING | NOT FOUND | 'Seven (Se7en)' -> Movie not found!
+2026-07-20 04:42:36,678 | WARNING | NOT FOUND | 'Usual Suspects, The' -> Movie not found!
+2026-07-20 04:42:36,970 | INFO | SUCCESS | Fetched metadata for 'Mighty Aphrodite'
+2026-07-20 04:42:37,261 | WARNING | NOT FOUND | 'Postino, Il' -> Movie not found!
+2026-07-20 04:42:37,545 | INFO | SUCCESS | Fetched metadata for 'Mr. Holland's Opus'
+2026-07-20 04:42:37,828 | WARNING | NOT FOUND | 'French Twist (Gazon maudit)' -> Movie not found!
+2026-07-20 04:42:38,113 | INFO | SUCCESS | Fetched metadata for 'From Dusk Till Dawn'
+2026-07-20 04:42:38,399 | WARNING | NOT FOUND | 'White Balloon, The' -> Movie not found!
+2026-07-20 04:42:38,683 | INFO | SUCCESS | Fetched metadata for 'Antonia's Line'
+2026-07-20 04:42:38,978 | INFO | SUCCESS | Fetched metadata for 'Angels and Insects'
+2026-07-20 04:42:39,273 | INFO | SUCCESS | Fetched metadata for 'Muppet Treasure Island'
+2026-07-20 04:42:39,554 | INFO | SUCCESS | Fetched metadata for 'Braveheart'
+2026-07-20 04:42:39,828 | INFO | SUCCESS | Fetched metadata for 'Taxi Driver'
+2026-07-20 04:42:40,115 | INFO | SUCCESS | Fetched metadata for 'Rumble in the Bronx'
+2026-07-20 04:42:40,402 | WARNING | NOT FOUND | 'Birdcage, The' -> Movie not found!
+2026-07-20 04:42:40,689 | WARNING | NOT FOUND | 'Brothers McMullen, The' -> Movie not found!
+2026-07-20 04:42:40,980 | INFO | SUCCESS | Fetched metadata for 'Bad Boys'
+2026-07-20 04:42:41,269 | INFO | SUCCESS | Fetched metadata for 'Apollo 13'
+2026-07-20 04:42:41,542 | INFO | SUCCESS | Fetched metadata for 'Batman Forever'
+2026-07-20 04:42:41,826 | INFO | SUCCESS | Fetched metadata for 'Belle de jour'
+2026-07-20 04:42:42,100 | INFO | SUCCESS | Fetched metadata for 'Crimson Tide'
+2026-07-20 04:42:42,382 | INFO | SUCCESS | Fetched metadata for 'Crumb'
+2026-07-20 04:42:42,665 | INFO | SUCCESS | Fetched metadata for 'Desperado'
+2026-07-20 04:42:42,946 | WARNING | NOT FOUND | 'Doom Generation, The' -> Movie not found!
+2026-07-20 04:42:43,233 | INFO | SUCCESS | Fetched metadata for 'Free Willy 2: The Adventure Home'
+2026-07-20 04:42:43,532 | INFO | SUCCESS | Fetched metadata for 'Mad Love'
+2026-07-20 04:42:43,805 | INFO | SUCCESS | Fetched metadata for 'Nadja'
+2026-07-20 04:42:44,079 | INFO | SUCCESS | Fetched metadata for 'Net, The'
+2026-07-20 04:42:44,370 | INFO | SUCCESS | Fetched metadata for 'Strange Days'
+2026-07-20 04:42:44,658 | INFO | SUCCESS | Fetched metadata for 'To Wong Foo, Thanks for Everything! Julie Newmar'
+2026-07-20 04:42:44,940 | INFO | SUCCESS | Fetched metadata for 'Billy Madison'
+2026-07-20 04:42:45,228 | INFO | SUCCESS | Fetched metadata for 'Clerks'
+2026-07-20 04:42:45,517 | INFO | SUCCESS | Fetched metadata for 'Disclosure'
+2026-07-20 04:42:45,787 | INFO | SUCCESS | Fetched metadata for 'Dolores Claiborne'
+2026-07-20 04:42:46,076 | INFO | SUCCESS | Fetched metadata for 'Eat Drink Man Woman'
+2026-07-20 04:42:46,350 | INFO | SUCCESS | Fetched metadata for 'Exotica'
+2026-07-20 04:42:46,640 | INFO | SUCCESS | Fetched metadata for 'Ed Wood'
+2026-07-20 04:42:46,921 | INFO | SUCCESS | Fetched metadata for 'Hoop Dreams'
+2026-07-20 04:42:47,209 | INFO | SUCCESS | Fetched metadata for 'I.Q.'
+2026-07-20 04:42:47,498 | INFO | SUCCESS | Fetched metadata for 'Star Wars'
+2026-07-20 04:42:47,503 | INFO | SUCCESS | Ingested metadata for 41 movies -> data/raw/metadata/2026-07-20/movie_metadata.csv
+2026-07-20 04:42:47,504 | INFO | === Ingestion run finished ===

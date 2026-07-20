@@ -1,0 +1,54 @@
+{
+  "feature_store_version": "1.0",
+  "last_updated": "2026-07-20",
+  "features": [
+    {
+      "name": "user_activity_count",
+      "entity": "user_id",
+      "description": "Total number of ratings given by a user",
+      "source": "data/raw/interactions/2026-07-20/ratings.csv",
+      "transformation": "groupby(user_id).count()",
+      "dtype": "int"
+    },
+    {
+      "name": "user_avg_rating",
+      "entity": "user_id",
+      "description": "Average rating given by a user across all movies",
+      "source": "data/raw/interactions/2026-07-20/ratings.csv",
+      "transformation": "groupby(user_id).mean()",
+      "dtype": "float"
+    },
+    {
+      "name": "item_popularity",
+      "entity": "item_id",
+      "description": "Total number of ratings received by a movie",
+      "source": "data/raw/interactions/2026-07-20/ratings.csv",
+      "transformation": "groupby(item_id).count()",
+      "dtype": "int"
+    },
+    {
+      "name": "item_avg_rating",
+      "entity": "item_id",
+      "description": "Average rating received by a movie across all users",
+      "source": "data/raw/interactions/2026-07-20/ratings.csv",
+      "transformation": "groupby(item_id).mean()",
+      "dtype": "float"
+    },
+    {
+      "name": "age_normalized",
+      "entity": "user_id",
+      "description": "User age scaled to 0-1 range using min-max normalization",
+      "source": "data/raw/ml-100k/u.user",
+      "transformation": "(age - min) / (max - min)",
+      "dtype": "float"
+    },
+    {
+      "name": "occupation_encoded",
+      "entity": "user_id",
+      "description": "User occupation label-encoded to integer",
+      "source": "data/raw/ml-100k/u.user",
+      "transformation": "LabelEncoder().fit_transform(occupation)",
+      "dtype": "int"
+    }
+  ]
+}
